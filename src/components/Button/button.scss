@@ -1,0 +1,19 @@
+.button {
+  color: var(--main-color);
+  padding: 0.6rem 1rem;
+  outline: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.fill {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.nofill {
+  background-color: white;
+  box-shadow: 0px 0px 0px 2px var(--main-gray) inset;
+}

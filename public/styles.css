@@ -1,0 +1,19 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-color: #7065ee;
+  --main-gray: rgb(220, 220, 220);
+  --light-gray: rgb(240, 240, 240);
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+}
