@@ -1,0 +1,29 @@
+.filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  background-color: white;
+  padding: 0.4rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+
+  .box {
+    width: 100%;
+    margin: 0.1rem;
+    border-right: 2px solid var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    border: 0;
+  }
+  h4 {
+    padding: 0 1rem;
+    font-weight: 500;
+    color: gray;
+  }
+}

@@ -699,6 +699,7 @@ const DUMMY_DATA = [
     location: "Mikhaylovskoye",
     property_type: "houses",
   },
+  {},
 ];
 
 export default DUMMY_DATA;

@@ -6,7 +6,7 @@ import size from "../../assets/size.png";
 import heart from "../../assets/heart.png";
 import spark from "../../assets/spark.png";
 
-const Property = (prop) => {
+const Property = (props) => {
   return (
     <div className="property">
       <div className="popular">
@@ -25,24 +25,24 @@ const Property = (prop) => {
           <img src={heart} alt="like" />
         </div>
         <div className="price">
-          $2,095 <span>/month</span>
+          ${props.price} <span>/month</span>
         </div>
-        <h2>Palm Harbor</h2>
-        <p className="address">2699 Green Valley, Highland Lake, FL</p>
+        <h2>{props.name}</h2>
+        <p className="address">{props.address}</p>
         <div className="break"></div>
         <div className="room-details">
           <div className="beds icon-container">
             <img className="icon" src={bed} alt="bed icon" />
-            <span>3 Beds</span>
+            <span>{props.beds} Beds</span>
           </div>
           <div className="bathrooms icon-container">
             <img className="icon" src={bath} alt="bath icon" />
-            <span>2 Bathrooms</span>
+            <span>{props.bathrooms} Bathrooms</span>
           </div>
           <div className="size icon-container">
             <img className="icon" src={size} alt="size icon" />
             <span>
-              5x7m<sup>2</sup>
+              {props.length}x{props.width}m<sup>2</sup>
             </span>
           </div>
         </div>

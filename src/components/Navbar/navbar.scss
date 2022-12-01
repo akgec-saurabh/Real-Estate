@@ -37,6 +37,16 @@
         &:hover {
           background-color: var(--light-gray);
           color: var(--main-color);
+
+          .icon {
+            transform: rotate(-180deg);
+          }
+        }
+
+        .icon {
+          width: 0.8rem;
+          margin-left: 0.5rem;
+          transition: all 0.5s;
         }
       }
     }

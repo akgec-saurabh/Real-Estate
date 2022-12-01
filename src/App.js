@@ -1,11 +1,12 @@
 import Navbar from "./components/Navbar/Navbar";
-import Property from "./components/Property/Property";
 import DUMMY_DATA from "./dummyData";
+import Rent from "./pages/Rent/Rent";
+
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <Property />
+      <Rent data={DUMMY_DATA} />
 
       {/* <Property data={DUMMY_DATA} /> */}
     </div>

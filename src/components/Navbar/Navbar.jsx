@@ -1,8 +1,8 @@
 import React from "react";
 import "./navbar.scss";
 import logo from "../../assets/logo.svg";
-import { ExpandMore } from "@mui/icons-material";
 import Button from "../Button/Button";
+import down from "../../assets/down.svg";
 
 const Navbar = () => {
   return (
@@ -18,11 +18,13 @@ const Navbar = () => {
           <li>Sell</li>
           <li>
             Manage Property
-            <ExpandMore />
+            {/* <ExpandMore /> */}
+            <img className="icon" src={down} alt="down" />
           </li>
           <li>
             Resources
-            <ExpandMore />
+            {/* <ExpandMore /> */}
+            <img className="icon" src={down} alt="down" />
           </li>
         </ul>
         <div className="buttons">
