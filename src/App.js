@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      <Property />
 
       {/* <Property data={DUMMY_DATA} /> */}
     </div>

@@ -1,0 +1,122 @@
+.property {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 1rem;
+  margin: 5rem;
+  background-color: white;
+  box-shadow: 0 0 2px rgb(200, 200, 200);
+  position: relative;
+
+  //Popular
+
+  .popular {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    left: -0.5rem;
+    padding: 0.2rem 0.5rem 0.2rem 1rem;
+    background-color: var(--main-color);
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+
+    z-index: 2;
+    .icon {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+
+  .cut {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(132, 0, 255);
+    position: absolute;
+    top: 50%;
+    transform: translateY(30%) rotate(45deg);
+    left: -0.3rem;
+    z-index: -1;
+  }
+
+  // Main image
+  .img {
+    height: 50%;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 2/1;
+      object-fit: cover;
+    }
+  }
+
+  .details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    position: relative;
+
+    .heart {
+      height: 3rem;
+      width: 3rem;
+      padding: 0.5rem;
+
+      border: 2px solid var(--light-gray);
+      border-radius: 50%;
+      position: absolute;
+      right: 1rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .price {
+      color: var(--main-color);
+      font-weight: 700;
+      font-size: 1.5rem;
+
+      span {
+        font-size: 1rem;
+        font-weight: normal;
+        color: gray;
+      }
+    }
+
+    .address {
+      color: gray;
+      font-size: 0.9rem;
+    }
+
+    .break {
+      height: 1.5px;
+      width: 100%;
+      background-color: var(--light-gray);
+    }
+    .room-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .icon-container {
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+        color: gray;
+        gap: 0.5rem;
+        img {
+          width: 1rem;
+        }
+      }
+    }
+  }
+}
