@@ -14,6 +14,12 @@
   --light-gray: rgb(240, 240, 240);
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   background-color: rgb(245, 245, 245);
 }

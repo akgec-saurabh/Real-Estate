@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./input.scss";
-import up from "../../assets/up-arrow.png";
 import down from "../../assets/down.svg";
 
 const Input = (props) => {
@@ -11,15 +10,21 @@ const Input = (props) => {
   const onSelectHandler = (e) => {
     setSelected(e.target.getAttribute("value"));
     setHide(true);
+
+    //passing updated input to filter
+    props.onChange(
+      e.target.getAttribute("name"),
+      e.target.getAttribute("value")
+    );
   };
 
   const onMouseEnterHandler = () => {
-    console.log("visible");
+    // console.log("visible");
     setHide(false);
   };
 
   const onMouseLeaveHandler = () => {
-    console.log("not visible");
+    // console.log("not visible");
     setHide(true);
   };
 
@@ -41,7 +46,12 @@ const Input = (props) => {
       <ul className={`options ${hide ? "hide" : ""}`}>
         {props.data.map((item, i) => {
           return (
-            <li key={i} value={item} onClick={onSelectHandler}>
+            <li
+              key={i}
+              name={props.name}
+              value={item}
+              onClick={onSelectHandler}
+            >
               {item}
             </li>
           );

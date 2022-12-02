@@ -1,0 +1,20 @@
+.date {
+  width: 100%;
+  .input-date {
+    display: block;
+    font-weight: 700;
+    border: 0;
+    outline: 0;
+    padding: 0 1rem;
+    width: 15rem;
+  }
+
+  input[type="date"] {
+    background: transparent;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(54%) sepia(61%) saturate(7162%) hue-rotate(230deg)
+      brightness(102%) contrast(87%);
+  }
+}

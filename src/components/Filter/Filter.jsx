@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useReducer } from "react";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
+import Date from "../Input/Date/Date";
 import "./filter.scss";
 
+import { filterReducer, INITIAL_STATE } from "../../filterReducer";
+
 const Filter = (props) => {
+  const [state, dispatch] = useReducer(filterReducer, INITIAL_STATE);
+
   const onSearch = () => {
-    props.onSearch();
+    props.onSearch(state);
   };
+
+  const onChangeHandler = (name, value) => {
+    console.log(name, value);
+
+    //dipatch to Filter Reducer
+
+    dispatch({ type: "CHANGE", payload: { name, value } });
+  };
+
+  console.log(state);
 
   return (
     <div className="filter">
@@ -14,8 +29,11 @@ const Filter = (props) => {
         <div className="center">
           <h4>Location</h4>
           <Input
+            onChange={onChangeHandler}
+            name="location"
             width="10rem"
             data={[
+              "All, USA",
               "Washington DC, USA",
               "Los Angeles, USA",
               "New York, USA",
@@ -29,14 +47,16 @@ const Filter = (props) => {
       </div>
       <div className="date box">
         <div className="center">
-          <h4>When</h4>
-          <input type="text" />
+          <h4>When to Move</h4>
+          <Date onChange={onChangeHandler} />
         </div>
       </div>
       <div className="price box">
         <div className="center">
           <h4>Price</h4>
           <Input
+            name="price"
+            onChange={onChangeHandler}
             width="10rem"
             data={[
               "$500-$2,500",
@@ -51,6 +71,8 @@ const Filter = (props) => {
         <div className="center">
           <h4>Property Type</h4>
           <Input
+            name="type"
+            onChange={onChangeHandler}
             width="8rem"
             data={[
               "All",

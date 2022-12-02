@@ -7,7 +7,8 @@ import Input from "../../components/Input/Input";
 const Rent = (props) => {
   const [transformedData, setTransformedData] = useState(props.data);
 
-  const onSearch = () => {
+  const onSearch = (filterData) => {
+    console.log(filterData);
     const obj = { type: "flats", date: "2022-12-15" };
 
     console.log(transformedData);
@@ -36,14 +37,14 @@ const Rent = (props) => {
           return (
             <Property
               key={item.id}
-              name={item.name}
-              price={item.price * 100}
-              address={item.address}
+              name={item.name_type}
+              price={item.price}
+              address={item.location}
               beds={item.beds}
               bathrooms={item.bathrooms}
               length={item.room_length}
               width={item.room_width}
-              location={item.location}
+              location={item.city}
             />
           );
         })}
