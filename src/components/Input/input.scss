@@ -64,3 +64,15 @@
     transform: rotate(-180deg);
   }
 }
+
+.searchInput {
+  background-color: white;
+  padding: 0.5rem 0;
+  border: 2px solid var(--main-gray);
+  border-radius: 0.5rem;
+  color: var(--main-color);
+
+  @media screen and (max-width: 1000px) {
+    border: 1px solid var(--main-gray);
+  }
+}

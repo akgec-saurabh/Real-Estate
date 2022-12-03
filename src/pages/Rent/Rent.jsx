@@ -3,7 +3,6 @@ import "./rent.scss";
 import Filter from "../../components/Filter/Filter";
 import Property from "../../components/Property/Property";
 import Input from "../../components/Input/Input";
-import { isContentEditable } from "@testing-library/user-event/dist/utils";
 
 const Rent = (props) => {
   const [transformedData, setTransformedData] = useState(props.data);
@@ -91,6 +90,7 @@ const Rent = (props) => {
         <h2>Search properties to rent</h2>
 
         <Input
+          search={true}
           onChange={() => {}}
           width="15rem"
           data={["Search with Search Bar", "Do Nothing"]}
@@ -113,6 +113,8 @@ const Rent = (props) => {
               location={item.city}
               date={item.date}
               dateString={new Date(item.date).toDateString()}
+              popular={item.popular}
+              url={item.hotel_img}
             />
           );
         })}

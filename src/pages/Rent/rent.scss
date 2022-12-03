@@ -33,6 +33,12 @@
     }
     .heading {
       flex-direction: column;
+      justify-content: center;
+      align-items: unset;
+      h2 {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

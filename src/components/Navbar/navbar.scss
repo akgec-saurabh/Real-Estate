@@ -93,6 +93,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    z-index: 99;
+    border: none;
+    box-shadow: 0 0 5px #cecece;
+
     .menu-icon {
       display: unset;
     }
@@ -104,8 +108,10 @@
     }
     .nav {
       overflow: hidden;
-      border-top: 2px solid var(--light-gray);
-      border-bottom: 2px solid var(--light-gray);
+      // border-top: 2px solid var(--light-gray);
+      // border-bottom: 2px solid var(--light-gray);
+      box-shadow: inset 0px 5px 5px -5px #cecece, 0px 5px 5px -5px #cecece;
+
       padding-bottom: 1rem;
 
       background-color: white;

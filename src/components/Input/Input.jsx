@@ -39,7 +39,7 @@ const Input = (props) => {
       onMouseEnter={onMouseEnterHandler}
       onMouseLeave={onMouseLeaveHandler}
       onClick={onSelectInputHandler}
-      className="input"
+      className={`input ${props.search?"searchInput":""} `}
     >
       <div className="inputContainer">
         <div style={{ width: `${props.width}` }} className="name">
