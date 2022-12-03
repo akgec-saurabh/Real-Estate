@@ -8,7 +8,7 @@ import spark from "../../assets/spark.png";
 
 const Property = (props) => {
   return (
-    <div className="property">
+    <div className={`property ${props.opacity ? "hide" : ""}`}>
       <div className="popular">
         <img className="icon" src={spark} alt="" />
         <span>POPULAR</span>
@@ -28,7 +28,10 @@ const Property = (props) => {
           ${props.price} <span>/month</span>
         </div>
         <h2>{props.name}</h2>
-        <p className="address">{props.address}</p>
+        <p className="address">
+          {props.address} ,{props.location} <br />
+          Availabe from {props.dateString}
+        </p>
         <div className="break"></div>
         <div className="room-details">
           <div className="beds icon-container">

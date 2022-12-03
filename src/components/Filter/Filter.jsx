@@ -33,14 +33,14 @@ const Filter = (props) => {
             name="location"
             width="10rem"
             data={[
-              "All, USA",
-              "Washington DC, USA",
-              "Los Angeles, USA",
-              "New York, USA",
-              "Seattle, USA",
-              "Las Vegas, USA",
-              "Boston, USA",
-              "Houston, USA",
+              "All of USA",
+              "Washington DC",
+              "Los Angeles",
+              "New York",
+              "Seattle",
+              "Las Vegas",
+              "Boston",
+              "Houston",
             ]}
           />
         </div>
@@ -59,6 +59,7 @@ const Filter = (props) => {
             onChange={onChangeHandler}
             width="10rem"
             data={[
+              "Above $500",
               "$500-$2,500",
               "$2,500-$5,000",
               "$7,500-$10,000",
