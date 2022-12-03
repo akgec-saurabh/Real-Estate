@@ -2,13 +2,6 @@
   cursor: pointer;
   position: relative;
 
-  &:hover {
-    .inputContainer {
-      .icon {
-        transform: rotate(-180deg);
-      }
-    }
-  }
   .inputContainer {
     display: flex;
     justify-content: space-between;
@@ -31,9 +24,7 @@
       align-items: center;
       border-radius: 50%;
 
-      .icon {
-        transition: all 0.5s;
-      }
+      transition: all 0.5s;
 
       img {
         width: 100%;
@@ -67,5 +58,9 @@
 
   .hide {
     visibility: hidden;
+  }
+
+  .rotateIcon {
+    transform: rotate(-180deg);
   }
 }

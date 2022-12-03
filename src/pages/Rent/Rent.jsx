@@ -90,7 +90,11 @@ const Rent = (props) => {
       <div className="heading">
         <h2>Search properties to rent</h2>
 
-        <Input width="15rem" data={["Search with Search Bar", "Do Nothing"]} />
+        <Input
+          onChange={() => {}}
+          width="15rem"
+          data={["Search with Search Bar", "Do Nothing"]}
+        />
       </div>
       <Filter onSearch={onSearch} />
 

@@ -9,7 +9,7 @@ const Input = (props) => {
 
   const onSelectHandler = (e) => {
     setSelected(e.target.getAttribute("value"));
-    setHide(true);
+    setHide(!hide);
 
     //passing updated input to filter
     props.onChange(
@@ -18,27 +18,34 @@ const Input = (props) => {
     );
   };
 
-  const onMouseEnterHandler = () => {
-    // console.log("visible");
-    setHide(false);
+  const onSelectInputHandler = () => {
+    setHide(!hide);
   };
 
-  const onMouseLeaveHandler = () => {
-    // console.log("not visible");
+  const onMouseEnterHandler = (e) => {
+    console.log("Mouse entered");
+    setHide(false);
+    // e.stopPropagation();
+  };
+
+  const onMouseLeaveHandler = (e) => {
+    console.log("Mouse left");
     setHide(true);
+    // e.stopPropagation();
   };
 
   return (
     <div
       onMouseEnter={onMouseEnterHandler}
       onMouseLeave={onMouseLeaveHandler}
+      onClick={onSelectInputHandler}
       className="input"
     >
       <div className="inputContainer">
         <div style={{ width: `${props.width}` }} className="name">
           {selected}
         </div>
-        <div className="arrow">
+        <div className={`arrow ${hide ? "" : "rotateIcon"}`}>
           <img className="icon" src={down} alt="" />
         </div>
       </div>

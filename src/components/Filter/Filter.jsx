@@ -31,7 +31,7 @@ const Filter = (props) => {
           <Input
             onChange={onChangeHandler}
             name="location"
-            width="10rem"
+            width="8rem"
             data={[
               "All of USA",
               "Washington DC",
@@ -57,7 +57,7 @@ const Filter = (props) => {
           <Input
             name="price"
             onChange={onChangeHandler}
-            width="10rem"
+            width="8rem"
             data={[
               "Above $500",
               "$500-$2,500",

@@ -8,8 +8,6 @@ function App() {
     <div className="app">
       <Navbar />
       <Rent data={DEFAULT_DATA} />
-
-      {/* <Property data={DUMMY_DATA} /> */}
     </div>
   );
 }

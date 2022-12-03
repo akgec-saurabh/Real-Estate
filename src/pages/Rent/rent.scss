@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 0.9rem;
+    padding: 0 1rem 0 2rem;
   }
   .container {
     margin: 1rem 0;
@@ -14,5 +15,24 @@
     flex-wrap: wrap;
     gap: 4rem;
     justify-content: space-between;
+  }
+  @media screen and (max-width: 1450px) {
+    padding: 1rem 7rem;
+  }
+
+  @media screen and (max-width: 1250px) {
+    padding: 1rem 4rem;
+    .container {
+      justify-content: space-evenly;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 1rem;
+    .container {
+      justify-content: center;
+    }
+    .heading {
+      flex-direction: column;
+    }
   }
 }

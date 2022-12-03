@@ -8,7 +8,12 @@ const Date = (props) => {
 
   return (
     <div className="date">
-      <input onChange={onChangeHandler} className="input-date" type="date" />
+      <input
+        value="2023-12-31"
+        onChange={onChangeHandler}
+        className="input-date"
+        type="date"
+      />
     </div>
   );
 };
